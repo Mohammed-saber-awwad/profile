@@ -1,0 +1,477 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-transition: 0.3s;
+}
+
+.serve {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+
+.border1 {
+  width: 50px;
+  height: 2px;
+  background-color: #009688;
+}
+
+.border-radius {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: #009688 2px solid;
+}
+
+.border2 {
+  width: 50px;
+  height: 2px;
+  background-color: #009688;
+}
+
+/************************************************/
+.settings-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  background-color: #fff;
+  width: 200px;
+  z-index: 1000;
+  min-height: 100vh;
+  transition: all ease-in-out 0.3s;
+
+  border: 1px solid #eee;
+}
+
+.settings-box.open {
+  left: 0;
+}
+
+.settings-box .toggle-settings {
+  position: absolute;
+  right: -30px;
+  top: 100px;
+  background-color: #fff;
+  text-align: center;
+  cursor: pointer;
+}
+
+.settings-box .toggle-settings .fa-gear {
+  width: 30px;
+  padding: 8px 0;
+}
+
+.settings-box .option-box {
+  padding: 10px;
+  text-align: center;
+  background-color: #eee;
+  margin: 10px;
+}
+
+.settings-box .option-box h4 {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.settings-box .option-box .colors-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.settings-box .option-box .colors-list li {
+  width: 24px;
+  height: 24px;
+  background-color: #333;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  border: 3px solid #eee;
+}
+
+.settings-box .option-box .colors-list li.active {
+  border-color: #fff;
+}
+
+.settings-box .option-box .colors-list li:first-child {
+  background-color: #ff9800;
+}
+
+/* .active {
+  background-color: #009688
+} */
+
+.settings-box .option-box .colors-list li:nth-child(2) {
+  background-color: #e91e63;
+}
+
+.settings-box .option-box .colors-list li:nth-child(3) {
+  background-color: #009688;
+}
+
+.settings-box .option-box .colors-list li:nth-child(4) {
+  background-color: #03a9f4;
+}
+
+.settings-box .option-box .colors-list li:nth-child(5) {
+  background-color: #4caf50;
+}
+
+/*********************************/
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #009688 !important;
+}
+
+.navbar-brand {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link,
+.navbar-brand {
+  color: white !important;
+}
+
+
+
+nav {
+  z-index: 1;
+}
+
+nav img {
+  width: 80px;
+  margin-right: 20px;
+}
+
+.form-inline .btn {
+  background-color: white;
+  border: #009688 1px solid;
+}
+
+.form-inline .btn:hover {
+  background-color: #009688;
+  border: white solid 1px;
+}
+
+.form-inline button {
+  color: #009688;
+}
+
+/* ****************************************************************************** */
+.home {
+  height: 650px;
+  background-image: url(../img/cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+
+
+}
+
+.home .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.home .home-content {
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 15%;
+}
+
+.home .home-content .text1 {
+  font-size: 27px;
+}
+
+.home .home-content .text2 {
+  font-size: 75px;
+  font-weight: 600px;
+  margin-left: -3px;
+  color: #009688;
+}
+
+.home .home-content .text3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home .home-content .text3 span {
+  color: #009688;
+  font-weight: bold;
+
+}
+
+
+.home button {
+  background-color: #009688;
+  border: #009688;
+}
+
+.home button:hover {
+  background-color: #009688;
+}
+
+/* *********************************************************** */
+.about {
+  padding: 30px;
+  padding-bottom: 80px;
+}
+
+.about h2 {
+  padding: 40px;
+  color: #009688;
+  text-align: center;
+  font-weight: bold;
+}
+
+.about img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.about .card {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #eee !important;
+  color: #000;
+
+
+}
+
+
+/* ********************************************************* */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+
+}
+
+.skills {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #eee;
+
+}
+
+.skills h2 {
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0 0 50px;
+  text-align: center;
+  color: #009688;
+}
+
+.skills .skill-box {
+  background-color: #fff;
+  display: flex;
+  padding: 15px;
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.skills .skill-box span {
+  background-color: #009688;
+}
+
+.skills .skill-box .skill-name {
+  font-weight: bold;
+  width: 140px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.skills .skill-box .skill-num {
+  font-weight: bold;
+  width: 140px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  line-height: 30px;
+}
+
+.skills .skill-box .skill-progress {
+  height: 30px;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+
+}
+
+.skills .skill-box .skill-progress span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.skills .skill-box .skill-progress span {
+  background-color: #009688;
+}
+
+/* *********************************************** */
+.services {
+  background-color: black;
+  padding: 30px;
+}
+
+.services h2 {
+  padding-bottom: 50px;
+  padding-top: 50px;
+  color: #009688;
+  text-align: center;
+}
+
+.services .card {
+  width: 100%;
+  padding: 20px;
+  background-color: #222 !important;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.services .services-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.services .card:hover {
+  transform: scale(1.05);
+}
+
+.services .card:hover {
+  background-color: #009688 !important;
+}
+
+.line {
+  width: 15%;
+  height: 3px;
+  background-color: #009688;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+/************************************************************/
+
+.work {
+  padding: 40px;
+}
+
+.work img {
+  height: 150px;
+}
+
+.work .card {
+  text-align: center;
+  padding: 20px;
+  background-color: #ddd !important;
+  color: #000;
+  transition: transform var(--main-transition), box-shadow var(--main-transition);
+
+}
+
+.work .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 2px 15px rgb(0 0 0 / 20%);
+}
+
+.work h2 {
+  padding: 40px;
+  color: var(--main-color);
+  text-align: center;
+  font-weight: bold;
+}
+
+.work .card a {
+  background-color: #009688 !important;
+  border: #009688;
+  color: white;
+}
+
+
+
+/* ******************************************************** */
+.contact {
+  height: 550px;
+  text-align: center;
+  background-color: #eee;
+}
+
+.form-row {
+  width: 60%;
+  margin: auto;
+}
+
+.contact h2 {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+  color: #009688;
+}
+
+.contact label {
+  font-weight: bold;
+}
+
+.contact .btn {
+  background-color: #009688;
+  border: #009688;
+}
+
+/* *************************************************** footer *************************************** */
+.footer {
+  background-color: #009688;
+  padding: 15px;
+}
+
+.footer .span,
+.connect {
+  color: white;
+  font-weight: bold;
+}
+
+.footer .icon {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: flex-end;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon a {
+  color: white;
+  margin-right: 8px;
+}
